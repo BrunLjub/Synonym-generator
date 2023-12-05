@@ -1,8 +1,8 @@
 
 #Za hrvatske riječi zamijeniti dico_eng sa dico_hrv i index_end sa index_hrv
 
-dico <- unname(as.matrix(read.table("dico_eng.txt"))) #matrica bridova
-index <- read.table("index_eng.txt")$V1 #riječi poredane po indeksu
+dico <- unname(as.matrix(read.table("dico_eng.txt"))) #dvostupčana matrica bridova
+index <- read.table("index_eng.txt")$V1 #vektor riječi poredane po indeksu
 uniqueVertices <- sort(union(dico[,1],dico[,2])) #skup indeksa 
 nverts <- length(uniqueVertices) #ukupan broj vrhova
 nedges <- nrow(dico) #ukupan broj bridova
